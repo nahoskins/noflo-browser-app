@@ -70,6 +70,26 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "websocket/Connect_6ury4": {
+            "component": "websocket/Connect",
+            "metadata": {
+                "label": "websocket/Connect",
+                "x": 504,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "websocket/SendMessage_dgfs0": {
+            "component": "websocket/SendMessage",
+            "metadata": {
+                "label": "websocket/SendMessage",
+                "x": 648,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -81,8 +101,7 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "container"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -131,8 +150,7 @@
             "tgt": {
                 "process": "core/Kick_ey1nh",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -142,8 +160,7 @@
             "tgt": {
                 "process": "dom/WriteHtml_fpz6j",
                 "port": "html"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "#button",
@@ -164,6 +181,13 @@
             "tgt": {
                 "process": "core/Kick_ey1nh",
                 "port": "data"
+            }
+        },
+        {
+            "data": "localhost:1907",
+            "tgt": {
+                "process": "websocket/Connect_6ury4",
+                "port": "url"
             }
         }
     ]
